@@ -13,6 +13,7 @@
                 <thead>
                     <tr>
                         <th>ID</th>
+                        <th>Type</th>
                         <th>Title</th>
                         <th>Slug</th>
                         <th>Content</th>
@@ -23,6 +24,7 @@
                     @foreach ($projects as $proj)
                     <tr>
                         <td>{{$proj->id}}</td>
+                        <td>{{$proj->type ? $proj->type->name : 'Senza tipologia'}}</td>
                         <td>{{$proj->title}}</td>
                         <td>{{$proj->slug}}</td>
                         <td>{{Str::limit($proj->content, 25, '...');}}</td>

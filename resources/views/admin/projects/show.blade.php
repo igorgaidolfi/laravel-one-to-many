@@ -17,6 +17,7 @@
             @else
                 <img src="{{asset('/img/aaaa.jpg')}}" alt="{{$project->title}}" width="350">
             @endif
+            <p>{{$project->type ? $project->type->name : 'Senza tipologia'}}</p>
             <h3>{{$project->slug}}</h3>
             <p>{{$project->content}}</p>
         </div>
