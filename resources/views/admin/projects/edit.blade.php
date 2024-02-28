@@ -16,7 +16,7 @@
         @endif
         <form action="{{route('admin.projects.update', $project->id)}}" method="post" enctype="multipart/form-data">
             @csrf
-            @method('PUT')
+            @method('PUT')Titolo gia\' inserito
             <div class="form-group mb-3">
                 <label for="title" class="form-label">Titolo</label>
                 <input type="text" class="form-control" id="title" name="title" placeholder="Titolo"
@@ -42,9 +42,7 @@
             </div>
             <div class="form-group mb-3">
                 <label for="content" class="form-label">Contenuto</label>
-                <textarea class="form-control" name="content" id="content" rows="3" placeholder="Contenuto"
-                    required>{{old('content') ?? $project->content}}
-                </textarea>
+                <textarea class="form-control" name="content" id="content" rows="3" placeholder="Contenuto" required>{{old('content') ?? $project->content}}</textarea>
             <button class="btn btn-success mt-3" type="submit">Salva</button>
             </div>
         </form>

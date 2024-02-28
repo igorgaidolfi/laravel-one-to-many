@@ -24,7 +24,7 @@ class UpdateProjectRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|max:120|unique:projects',
+            'title' => 'required|max:120',
             'type_id' => 'nullable|exists:types,id',
             'content' => 'required|min:20'
         ];
@@ -35,7 +35,6 @@ class UpdateProjectRequest extends FormRequest
         return[
             'title.required' => 'Il titolo e\' richiesto',
             'title.max' => 'Il titolo puo\' contenere al massimo 120 caratteri',
-            'title.unique' => 'Questo titolo e\' gia\' stato utilizzato',
             'type_id.exists' => 'Il tipo non esiste',
             'content.required' => 'Il contenuto e\' obbligatorio',
             'content.min' => 'Il contenuto deve contenere minimo 20 caratteri'
